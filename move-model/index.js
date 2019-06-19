@@ -53,7 +53,7 @@ function initLight() {
   spotLight.position.set(100, 100, 100);
   scene.add(spotLight);
   light = new THREE.DirectionalLight(0xffffff);
-  light.position.set(0, 200, 100);
+  light.position.set(0, 1000, 100);
 
   light.castShadow = true;
   light.shadow.camera.top = 180;
@@ -61,8 +61,10 @@ function initLight() {
   light.shadow.camera.left = -120;
   light.shadow.camera.right = 120;
 
-  //告诉平行光需要开启阴影投射
+  // 光源阴影投射
   light.castShadow = true;
+  spotLight.castShadow = true
+
 
   scene.add(light);
 }
