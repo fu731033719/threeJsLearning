@@ -88,7 +88,6 @@ function initModel() {
   //加载模型
   var loader = new THREE.FBXLoader();
   loader.load("./Samba.fbx", function (mesh) {
-    console.log(123123);
     console.log(mesh);
 
     //添加骨骼辅助
