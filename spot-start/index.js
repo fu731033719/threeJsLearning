@@ -16,8 +16,6 @@ function init() {
     // 初始化摄像机插件
     var orbitControls = new THREE.OrbitControls(camera)
     orbitControls.autoRotate = true
-    var img = new Image();
-    img.src = "https://img.alicdn.com/tfs/TB1zFzsUSzqK1RjSZPcXXbTepXa-39-39.png";
     var getTexture = function () {
         var canvas = document.createElement('canvas')
         canvas.width = 32;
@@ -51,7 +49,6 @@ function init() {
         map: getTexture(),
         // 粒子的大小是否和其与摄像机的距离有光，默认值 true
         sizeAttenuation: true,
-        // 用于去除纹理的黑色背景，关于 depthTest 和 depthWrite 的详细解释，请查看https://stackoverflow.com/questions/37647853/three-js-depthwrite-vs-depthtest-for-transparent-canvas-texture-map-on-three-p
         depthWrite: false
     })
     var range = 1000
@@ -69,7 +66,6 @@ function init() {
     render()
     var step = 0
     function render() {
-        // 渲染，即摄像机拍下此刻的场景
         renderer.render(scene, camera)
         step += 0.001;
         points.rotation.x = step;
