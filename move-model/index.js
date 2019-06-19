@@ -20,8 +20,8 @@ function initCamera() {
 
 function initScene() {
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xa0a0a0);
-  scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
+  scene.background = new THREE.Color(0x000000);
+  scene.fog = new THREE.Fog(0x000000, 200, 1000);
 }
 
 //初始化dat.GUI简化试验流程
@@ -48,7 +48,10 @@ function initGui() {
 
 function initLight() {
   scene.add(new THREE.AmbientLight(0x444444));
-
+  scene.add(new THREE.HemisphereLight(0x5d00ff));
+  var spotLight = new THREE.SpotLight(0xff3200);
+  spotLight.position.set(100, 100, 100);
+  scene.add(spotLight);
   light = new THREE.DirectionalLight(0xffffff);
   light.position.set(0, 200, 100);
 
