@@ -51,8 +51,8 @@ function init() {
         sizeAttenuation: true,
         depthWrite: false
     })
-    var range = 1000
-    for (var i = 0; i < 1000; i++) {
+    var range = 500
+    for (var i = 0; i < 2000; i++) {
         var particle = new THREE.Vector3(
             Math.random() * range - range / 2,
             Math.random() * range - range / 2,
