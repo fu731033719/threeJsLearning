@@ -47,7 +47,7 @@ function initGui() {
 }
 
 function initLight() {
-  scene.add(new THREE.AmbientLight(0x444444));
+  scene.add(new THREE.AmbientLight(0xcccccc));
   scene.add(new THREE.HemisphereLight(0x5d00ff));
   var spotLight = new THREE.SpotLight(0xff3200);
   spotLight.position.set(100, 100, 100);
@@ -92,7 +92,7 @@ function initModel() {
 
   //加载模型
   var loader = new THREE.FBXLoader();
-  loader.load("./Samba.fbx", function (mesh) {
+  loader.load("./Girl.fbx", function (mesh) {
     console.log(mesh);
 
     //添加骨骼辅助

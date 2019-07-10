@@ -25,7 +25,7 @@ function init() {
 
     var spotLight = new THREE.SpotLight(0xffffff)
     spotLight.position.set(30, 60, 40)
-    spotLight.castShadow = true
+    spotLight.castShadow = false
     spotLight.shadow.mapSize.width = 1024
     spotLight.shadow.mapSize.height = 1024
 
